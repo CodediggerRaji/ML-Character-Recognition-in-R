@@ -1,0 +1,103 @@
+
+
+Install R and RStudio on Ubuntu Linux
+
+
+Step 1: Install R without OpenBLAS
+Open the terminal and paste this piece of code:
+
+# R without OpenBLAS
+sudo apt-get install r-base
+Then press enter.
+
+
+Step 2: Install R with OpenBLAS
+Open the terminal and paste this piece of code:
+
+# R with OpenBLAS
+sudo apt-get install libopenblas-base r-base
+Then press enter.
+
+
+Step 3: Install RStudio
+Don't leave the terminal and paste this piece of code:
+
+sudo apt-get install gdebi
+cd ~/Downloads
+wget https://download1.rstudio.org/rstudio-xenial-1.1.419-amd64.deb
+sudo gdebi rstudio-xenial-1.1.419-amd64.deb
+Then press enter.
+
+Another install option is to visit RStudio to obtain the software and then install it from the desktop without needing commands.
+
+Install R and RStudio on Windows
+
+Step 1a: Install Microsoft R Open
+To install R on Windows just download it from MRO Downloads and then execute the installer. The setup is straightforward, just hit 'next' when required and be sure you mark the MKL option.
+
+
+Step 1b: Install CRAN R
+As an alternative to step one, you can also install from CRAN (The Comprehensive R Archive Network). Just visit CRAN downloads and get the last version.
+
+
+Step 2: Install RStudio
+To install RStudio just visit RStudio Downloads and download the last version. The setup should be straightforward.
+
+Install R and RStudio on Mac OS X
+
+Step 1: Install XCode Command Line Tools
+
+Open the Terminal (cmd + space and search 'Terminal') and paste this command:
+
+xcode-select --install
+Then press Enter.
+
+Step 2: Install Homebrew
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+Then press Enter.
+
+Copy and paste this piece of code in terminal : 
+
+# Homebrew PATH
+echo "export LC_ALL=en_US.UTF-8" >> ~/.bash_profile
+echo "export LANG=en_US.UTF-8" >> ~/.bash_profile
+echo "export PATH=/usr/local/bin:$PATH" >> ~/.bash_profile && source ~/.bash_profile
+Press Enter.
+
+Step 3a: Install R without OpenBLAS
+
+brew install r
+echo 'Sys.setlocale(category="LC_ALL", locale = "en_US.UTF-8")' >> ~/.bash_profile
+Then press Enter.
+
+Step 3b: Install R with OpenBLAS
+
+brew install openblas
+brew install r --with-openblas
+echo 'Sys.setlocale(category="LC_ALL", locale = "en_US.UTF-8")' >> ~/.bash_profile
+Then press Enter.
+
+Step 4: Install RStudio
+
+brew cask install rstudio
+Then press Enter.
+
+
+Install the Tidyverse
+
+Open RStudio. These steps are the same for any operating system.
+
+In the RStudio bottom left panel, you can type any valid command followed by enter and R will execute that command.
+
+Paste the next line in the bottom left panel:
+
+{r install-tidyverse, eval = F}
+install.packages("tidyverse", repos = 'https://cran.us.r-project.org')
+
+Press Enter.
+
+Now you have a cool RStudio IDE ready to work with
+
+
+

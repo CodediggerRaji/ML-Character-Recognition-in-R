@@ -1,0 +1,8 @@
+﻿Installation of packages in RStudio
+
+Warning in install.packages :
+  package ‘neuralnet’ is not available (for R version 3.2.5)
+
+Incase if your RStudio shows the above error when you try to install packages using the package option or by running "install.packages("neuralnet")" code, then try running the below code to successfully intall packages
+
+install.packages('package_name', dependencies=TRUE, repos='http://cran.rstudio.com/')
